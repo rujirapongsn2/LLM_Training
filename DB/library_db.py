@@ -6,7 +6,7 @@ from datetime import datetime
 class LibraryDatabase:
     def __init__(self):
         # Neon database connection string
-        self.connection_string = "postgresql://neondb_owner:npg_pO7oQiMzwxJ2@ep-raspy-rice-a1rij5tx-pooler.ap-southeast-1.aws.neon.tech/library?sslmode=require"
+        self.connection_string = "xxxxxxx"  # แทนที่ด้วย connection string ของคุณ
         self.connection = None
         
     def connect(self):

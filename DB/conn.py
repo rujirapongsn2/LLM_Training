@@ -2,7 +2,7 @@ import psycopg2
 from psycopg2.extras import RealDictCursor
 
 # Connection string สำหรับ Neon database
-CONNECTION_STRING = "postgresql://neondb_owner:npg_pO7oQiMzwxJ2@ep-raspy-rice-a1rij5tx-pooler.ap-southeast-1.aws.neon.tech/library?sslmode=require"
+CONNECTION_STRING = "xxxxxx"  # แทนที่ด้วย connection string ของคุณ
 
 def connect_to_neon():
     """เชื่อมต่อกับ Neon database แบบง่าย"""
