@@ -55,4 +55,12 @@
 
 ### 4. Commit ขึ้น Git
 >
-> ช่วย commit ขึ้น git https://github.com/rujirapongsn2/ChatLibrary.git
+> 
+ช่วย commit ขึ้น git https://github.com/rujirapongsn2/ChatLibrary.git
+
+---
+
+### 5. แหล่งข้อมูลศึกษาการใช้งาน Gemini CLI
+
+**Prompt:**
+> แหล่งข้อมูลศึกษาการใช้งาน Gemini CLI: https://youtu.be/CqL5kB8pOfo?si=YGm9xDvFKzaQHX3f
