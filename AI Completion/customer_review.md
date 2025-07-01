@@ -4,15 +4,21 @@
 
 ```python
 import requests
+import urllib3
+
+# ปิดการแสดงคำเตือน InsecureRequestWarning เมื่อใช้ verify=False
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 book_reviews = '''ผมเคยพยายามสร้างนิสัยใหม่ๆ มาหลายครั้งแต่ก็ล้มเหลวตลอดจนได้มาอ่าน Atomic Habits
                 หนังสือเล่มนี้เปิดมุมมองใหม่เกี่ยวกับการเปลี่ยนแปลงตัวเอง มันเน้นที่ 'ระบบ' มากกว่า 'เป้าหมาย'
                 ซึ่งเป็นสิ่งที่ผมมองข้ามไปตลอด เป็นหนังสือที่ควรค่าแก่การอ่านสำหรับทุกคนที่ต้องการพัฒนาตัวเอง'''
 
-bearer_token = "xxxx"
+# !! สำคัญ: กรุณาแทนที่ "YOUR_BEARER_TOKEN" ด้วย Token ที่ถูกต้องของคุณ
+bearer_token = "YOUR_BEARER_TOKEN"
 url = "https://genai.softnix.ai/external/api/completion-messages"
+
 payload = {
-  "inputs": {"customer_review":book_reviews},
+  "inputs": {"customer_review": book_reviews},
   "citation": True,
   "response_mode": "blocking"
 }
@@ -20,11 +26,17 @@ headers = {
   "Content-Type": "application/json",
   "Authorization": f"Bearer {bearer_token}"
 }
+
+# ส่ง Request ไปยัง API และปิดการตรวจสอบ SSL certificate
 response = requests.post(url, json=payload, headers=headers, verify=False)
 
-# หากต้องการดูผลลัพธ์ที่ได้จาก API สามารถพิมพ์ตัวแปร response ได้
-# print(response.status_code)
-# print(response.json())
+# หากต้องการดูผลลัพธ์ที่ได้จาก API สามารถยกเลิกคอมเมนต์บรรทัดด้านล่างได้
+# print(f"Status Code: {response.status_code}")
+# if response.status_code == 200:
+#     print("Response JSON:")
+#     print(response.json())
+# else:
+#     print(f"Error: {response.text}")
 ```
 
 ## คำอธิบายโค้ด
