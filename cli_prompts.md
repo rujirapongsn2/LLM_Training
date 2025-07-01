@@ -64,3 +64,4 @@
 
 **Prompt:**
 > แหล่งข้อมูลศึกษาการใช้งาน Gemini CLI: https://youtu.be/CqL5kB8pOfo?si=YGm9xDvFKzaQHX3f
+> แหล่งเรียนรู้เพิ่มเติม: https://youtu.be/feT7_wVmgv0?si=sC2C96JwWzdXRFG5
